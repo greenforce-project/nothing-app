@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nothing_background">#FF000000</color>
+    <color name="nothing_foreground">#FFFFFFFF</color>
+    <color name="nothing_muted">#FFA5A5A5</color>
+
+    <color name="nothing_panel">#FF141414</color>
+    <color name="nothing_divider">#FF383838</color>
+
+    <color name="nothing_button">#FFFFFFFF</color>
+    <color name="nothing_button_text">#FF000000</color>
+
+    <color name="nothing_secondary_button">#FF000000</color>
+    <color name="nothing_secondary_stroke">#FF444444</color>
+</resources>

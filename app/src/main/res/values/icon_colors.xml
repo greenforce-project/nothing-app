@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nothing_icon_background">
+        #FFFFFFFF
+    </color>
+
+    <color name="nothing_icon_foreground">
+        #FF000000
+    </color>
+</resources>

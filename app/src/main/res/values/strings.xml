@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">nothing</string>
+    <string name="nothing">nothing</string>
+
+    <string name="initial_message">
+        tap start, then do absolutely nothing
+    </string>
+
+    <string name="running_message">
+        don\'t touch anything
+    </string>
+
+    <string name="instruction">
+        touching the screen ends the challenge
+    </string>
+
+    <string name="start_challenge">
+        start doing nothing
+    </string>
+
+    <string name="try_again">
+        do nothing again
+    </string>
+
+    <string name="share">share nothing</string>
+    <string name="reset_stats">reset stats</string>
+
+    <string name="best_format">best\n%1$s</string>
+
+    <string name="attempts_format">
+        attempts\n%1$d
+    </string>
+
+    <string name="new_best_message">
+        new best. impressive nothing.
+    </string>
+
+    <string name="left_app_message">
+        you left nothing behind
+    </string>
+
+    <string name="default_failure_message">
+        you ruined nothing
+    </string>
+
+    <string name="statistics_reset">
+        nothing has been forgotten
+    </string>
+
+    <string name="reset_dialog_title">
+        reset nothing?
+    </string>
+
+    <string name="reset_dialog_message">
+        your best time and attempts will disappear into nothing
+    </string>
+
+    <string name="cancel">cancel</string>
+    <string name="reset">reset</string>
+
+    <string name="share_title">
+        share nothing
+    </string>
+
+    <string name="share_message">
+        I did nothing for %1$s after %2$d attempts. Can you do less?
+    </string>
+
+    <string-array name="failure_messages">
+        <item>you ruined nothing</item>
+        <item>that was suspiciously something</item>
+        <item>your finger had one job</item>
+        <item>almost nothing. almost.</item>
+        <item>nothing was going so well</item>
+        <item>congratulations, you did something</item>
+        <item>please stop interacting</item>
+        <item>doing nothing is harder than it looks</item>
+        <item>the screen did not ask for that</item>
+        <item>nothing has been disturbed</item>
+    </string-array>
+
+</resources>
