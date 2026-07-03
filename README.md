@@ -57,7 +57,32 @@ challenge.
 
 The same experience, except darker.
 
+## Challenge milestones
+
+The status message changes automatically as the player reaches
+longer periods of inactivity:
+
+- 10 seconds — Almost Nothing
+- 30 seconds — Professionally Inactive
+- 1 minute — Certified Nothing
+- 5 minutes — Master of Absolutely Nothing
+- 10 minutes — Are You Still There?
+
+## Challenge rules
+
+The current challenge ends when the user:
+
+- touches the application screen;
+- leaves the application;
+- opens another application;
+- opens a system surface that removes window focus;
+- locks the device.
+
+The screen remains awake while a challenge is active.
+
 ## Privacy
+
+[Read the full privacy policy](docs/PRIVACY.md).
 
 The application does not:
 

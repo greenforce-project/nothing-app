@@ -24,10 +24,17 @@
         do nothing again
     </string>
 
-    <string name="share">share nothing</string>
-    <string name="reset_stats">reset stats</string>
+    <string name="share">
+        share nothing
+    </string>
 
-    <string name="best_format">best\n%1$s</string>
+    <string name="reset_stats">
+        reset stats
+    </string>
+
+    <string name="best_format">
+        best\n%1$s
+    </string>
 
     <string name="attempts_format">
         attempts\n%1$d
@@ -41,12 +48,36 @@
         you left nothing behind
     </string>
 
+    <string name="focus_lost_message">
+        distraction detected. nothing ended.
+    </string>
+
     <string name="default_failure_message">
         you ruined nothing
     </string>
 
     <string name="statistics_reset">
         nothing has been forgotten
+    </string>
+
+    <string name="milestone_ten_seconds">
+        almost nothing
+    </string>
+
+    <string name="milestone_thirty_seconds">
+        professionally inactive
+    </string>
+
+    <string name="milestone_one_minute">
+        certified nothing
+    </string>
+
+    <string name="milestone_five_minutes">
+        master of absolutely nothing
+    </string>
+
+    <string name="milestone_ten_minutes">
+        are you still there?
     </string>
 
     <string name="reset_dialog_title">
@@ -57,8 +88,13 @@
         your best time and attempts will disappear into nothing
     </string>
 
-    <string name="cancel">cancel</string>
-    <string name="reset">reset</string>
+    <string name="cancel">
+        cancel
+    </string>
+
+    <string name="reset">
+        reset
+    </string>
 
     <string name="share_title">
         share nothing

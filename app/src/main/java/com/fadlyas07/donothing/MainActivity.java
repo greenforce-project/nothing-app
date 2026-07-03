@@ -2,7 +2,6 @@ package com.fadlyas07.donothing;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ClipData;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -33,12 +32,29 @@ public final class MainActivity extends Activity {
     private static final String KEY_ATTEMPTS =
         "attempt_count";
 
-    private static final long TIMER_UPDATE_INTERVAL = 16L;
+    private static final long TIMER_UPDATE_INTERVAL =
+        16L;
+
+    private static final long MILESTONE_TEN_SECONDS =
+        10_000L;
+
+    private static final long MILESTONE_THIRTY_SECONDS =
+        30_000L;
+
+    private static final long MILESTONE_ONE_MINUTE =
+        60_000L;
+
+    private static final long MILESTONE_FIVE_MINUTES =
+        300_000L;
+
+    private static final long MILESTONE_TEN_MINUTES =
+        600_000L;
 
     private final Handler timerHandler =
         new Handler(Looper.getMainLooper());
 
-    private final Random random = new Random();
+    private final Random random =
+        new Random();
 
     private View rootView;
     private TextView timerText;
@@ -59,6 +75,8 @@ public final class MainActivity extends Activity {
     private long bestTimeMillis = 0L;
     private long attemptCount = 0L;
 
+    private int currentMilestoneLevel = 0;
+
     private final Runnable timerRunnable =
         new Runnable() {
             @Override
@@ -68,12 +86,13 @@ public final class MainActivity extends Activity {
                 }
 
                 long elapsed =
-                    SystemClock.elapsedRealtime()
-                        - challengeStartedAt;
+                    getCurrentElapsedTime();
 
                 timerText.setText(
                     formatDuration(elapsed)
                 );
+
+                updateMilestone(elapsed);
 
                 timerHandler.postDelayed(
                     this,
@@ -111,6 +130,25 @@ public final class MainActivity extends Activity {
         }
 
         return super.dispatchTouchEvent(event);
+    }
+
+    @Override
+    public void onWindowFocusChanged(
+        boolean hasFocus
+    ) {
+        super.onWindowFocusChanged(hasFocus);
+
+        /*
+         * Opening the notification shade or another system
+         * surface means the user stopped doing nothing.
+         */
+        if (!hasFocus && challengeRunning) {
+            finishChallenge(
+                getString(
+                    R.string.focus_lost_message
+                )
+            );
+        }
     }
 
     @Override
@@ -186,6 +224,8 @@ public final class MainActivity extends Activity {
         challengeStartedAt =
             SystemClock.elapsedRealtime();
 
+        currentMilestoneLevel = 0;
+
         timerText.setText(
             formatDuration(0L)
         );
@@ -194,17 +234,7 @@ public final class MainActivity extends Activity {
             R.string.running_message
         );
 
-        startButton.setVisibility(
-            View.GONE
-        );
-
-        shareButton.setVisibility(
-            View.GONE
-        );
-
-        resetButton.setVisibility(
-            View.GONE
-        );
+        setControlsVisible(false);
 
         getWindow().addFlags(
             WindowManager.LayoutParams
@@ -228,8 +258,7 @@ public final class MainActivity extends Activity {
         }
 
         long elapsed =
-            SystemClock.elapsedRealtime()
-                - challengeStartedAt;
+            getCurrentElapsedTime();
 
         challengeRunning = false;
 
@@ -281,20 +310,94 @@ public final class MainActivity extends Activity {
             R.string.try_again
         );
 
+        setControlsVisible(true);
+    }
+
+    private long getCurrentElapsedTime() {
+        return Math.max(
+            0L,
+            SystemClock.elapsedRealtime()
+                - challengeStartedAt
+        );
+    }
+
+    private void updateMilestone(
+        long elapsed
+    ) {
+        int milestoneLevel;
+        int messageResource;
+
+        if (elapsed >= MILESTONE_TEN_MINUTES) {
+            milestoneLevel = 5;
+            messageResource =
+                R.string.milestone_ten_minutes;
+        } else if (
+            elapsed >= MILESTONE_FIVE_MINUTES
+        ) {
+            milestoneLevel = 4;
+            messageResource =
+                R.string.milestone_five_minutes;
+        } else if (
+            elapsed >= MILESTONE_ONE_MINUTE
+        ) {
+            milestoneLevel = 3;
+            messageResource =
+                R.string.milestone_one_minute;
+        } else if (
+            elapsed >= MILESTONE_THIRTY_SECONDS
+        ) {
+            milestoneLevel = 2;
+            messageResource =
+                R.string.milestone_thirty_seconds;
+        } else if (
+            elapsed >= MILESTONE_TEN_SECONDS
+        ) {
+            milestoneLevel = 1;
+            messageResource =
+                R.string.milestone_ten_seconds;
+        } else {
+            return;
+        }
+
+        if (
+            milestoneLevel
+                == currentMilestoneLevel
+        ) {
+            return;
+        }
+
+        currentMilestoneLevel =
+            milestoneLevel;
+
+        statusText.setText(
+            messageResource
+        );
+    }
+
+    private void setControlsVisible(
+        boolean visible
+    ) {
+        int visibility =
+            visible
+                ? View.VISIBLE
+                : View.GONE;
+
         startButton.setVisibility(
-            View.VISIBLE
+            visibility
         );
 
         shareButton.setVisibility(
-            View.VISIBLE
+            visibility
         );
 
         resetButton.setVisibility(
-            View.VISIBLE
+            visibility
         );
     }
 
     private void renderIdleState() {
+        currentMilestoneLevel = 0;
+
         timerText.setText(
             formatDuration(0L)
         );
@@ -307,18 +410,7 @@ public final class MainActivity extends Activity {
             R.string.start_challenge
         );
 
-        startButton.setVisibility(
-            View.VISIBLE
-        );
-
-        shareButton.setVisibility(
-            View.VISIBLE
-        );
-
-        resetButton.setVisibility(
-            View.VISIBLE
-        );
-
+        setControlsVisible(true);
         renderStatistics();
     }
 
@@ -410,9 +502,7 @@ public final class MainActivity extends Activity {
             );
 
         Intent shareIntent =
-            new Intent(
-                Intent.ACTION_SEND
-            );
+            new Intent(Intent.ACTION_SEND);
 
         shareIntent.setType(
             "text/plain"
