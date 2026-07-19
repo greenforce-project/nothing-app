@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="menu_subtitle">
+        choose what not to do
+    </string>
+
+    <string name="menu_do_nothing">
+        do nothing
+    </string>
+
+    <string name="menu_escape_nothing">
+        escape nothing
+    </string>
+
+    <string name="menu_footer">
+        two games. still nothing.
+    </string>
+
+    <string name="maze_title">
+        escape nothing
+    </string>
+
+    <string name="maze_initial_message">
+        swipe the dot toward the square
+    </string>
+
+    <string name="maze_running_message">
+        keep looking for somewhere
+    </string>
+
+    <string name="maze_wall_message">
+        nothing here.
+    </string>
+
+    <string name="maze_finished_message">
+        you escaped nothing.
+    </string>
+
+    <string name="maze_new_best_message">
+        new best. all that effort for nothing.
+    </string>
+
+    <string name="maze_moves_initial">
+        moves\n0
+    </string>
+
+    <string name="maze_moves_format">
+        moves\n%1$d
+    </string>
+
+    <string name="maze_best_format">
+        best %1$s · %2$s moves
+    </string>
+
+    <string name="maze_new_maze">
+        new maze
+    </string>
+
+    <string name="maze_try_again">
+        do it again
+    </string>
+
+    <string name="maze_return">
+        return to nothing
+    </string>
+
+</resources>
