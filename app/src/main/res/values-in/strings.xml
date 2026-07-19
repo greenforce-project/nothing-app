@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Nama merek tetap menggunakan "nothing". -->
+    <string name="app_name">nothing</string>
+
+    <string name="nothing">nothing</string>
+
+    <string name="initial_message">
+        ketuk mulai, lalu jangan lakukan apa pun
+    </string>
+
+    <string name="running_message">
+        jangan sentuh apa pun
+    </string>
+
+    <string name="instruction">
+        menyentuh layar akan mengakhiri tantangan
+    </string>
+
+    <string name="start_challenge">
+        mulai tidak melakukan apa pun
+    </string>
+
+    <string name="try_again">
+        tidak melakukan apa pun lagi
+    </string>
+
+    <string name="share">
+        bagikan hasil
+    </string>
+
+    <string name="reset_stats">
+        atur ulang statistik
+    </string>
+
+    <string name="best_format">
+        terbaik\n%1$s
+    </string>
+
+    <string name="attempts_format">
+        percobaan\n%1$d
+    </string>
+
+    <string name="new_best_message">
+        rekor baru. ketiadaan yang mengesankan.
+    </string>
+
+    <string name="left_app_message">
+        kamu meninggalkan ketiadaan
+    </string>
+
+    <string name="focus_lost_message">
+        gangguan terdeteksi. ketiadaan berakhir.
+    </string>
+
+    <string name="default_failure_message">
+        kamu merusak ketiadaan
+    </string>
+
+    <string name="statistics_reset">
+        semuanya telah dilupakan
+    </string>
+
+    <string name="milestone_ten_seconds">
+        hampir tidak melakukan apa pun
+    </string>
+
+    <string name="milestone_thirty_seconds">
+        tidak aktif secara profesional
+    </string>
+
+    <string name="milestone_one_minute">
+        resmi tidak melakukan apa pun
+    </string>
+
+    <string name="milestone_five_minutes">
+        master dalam tidak melakukan apa pun
+    </string>
+
+    <string name="milestone_ten_minutes">
+        kamu masih di sana?
+    </string>
+
+    <string name="reset_dialog_title">
+        atur ulang semuanya?
+    </string>
+
+    <string name="reset_dialog_message">
+        waktu terbaik dan jumlah percobaan akan lenyap
+    </string>
+
+    <string name="cancel">
+        batal
+    </string>
+
+    <string name="reset">
+        atur ulang
+    </string>
+
+    <string name="share_title">
+        bagikan hasil
+    </string>
+
+    <string name="share_message">
+        Saya tidak melakukan apa pun selama %1$s setelah %2$d percobaan. Bisa lebih sedikit?
+    </string>
+
+    <string-array name="failure_messages">
+
+        <item>kamu merusak ketiadaan</item>
+
+        <item>
+            itu mencurigakan seperti sebuah kegiatan
+        </item>
+
+        <item>
+            jarimu hanya punya satu tugas
+        </item>
+
+        <item>
+            hampir tidak melakukan apa pun. hampir.
+        </item>
+
+        <item>
+            tadinya ketiadaan berjalan dengan baik
+        </item>
+
+        <item>
+            selamat, kamu melakukan sesuatu
+        </item>
+
+        <item>
+            tolong berhenti berinteraksi
+        </item>
+
+        <item>
+            tidak melakukan apa pun ternyata lebih sulit dari kelihatannya
+        </item>
+
+        <item>
+            layar tidak meminta disentuh
+        </item>
+
+        <item>
+            ketiadaan telah terganggu
+        </item>
+
+    </string-array>
+
+</resources>

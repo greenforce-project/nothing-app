@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="menu_subtitle">
+        pilih apa yang tidak ingin kamu lakukan
+    </string>
+
+    <string name="menu_do_nothing">
+        jangan lakukan apa pun
+    </string>
+
+    <string name="menu_escape_nothing">
+        keluar dari ketiadaan
+    </string>
+
+    <string name="menu_footer">
+        dua permainan. tetap tidak ada apa-apa.
+    </string>
+
+    <string name="maze_title">
+        keluar dari ketiadaan
+    </string>
+
+    <string name="maze_initial_message">
+        geser titik menuju kotak
+    </string>
+
+    <string name="maze_running_message">
+        terus cari jalan keluar
+    </string>
+
+    <string name="maze_wall_message">
+        tidak ada jalan di sini.
+    </string>
+
+    <string name="maze_finished_message">
+        kamu berhasil keluar dari ketiadaan.
+    </string>
+
+    <string name="maze_new_best_message">
+        rekor baru. semua usaha itu demi ketiadaan.
+    </string>
+
+    <string name="maze_moves_initial">
+        langkah\n0
+    </string>
+
+    <string name="maze_moves_format">
+        langkah\n%1$d
+    </string>
+
+    <string name="maze_best_format">
+        terbaik %1$s · %2$s langkah
+    </string>
+
+    <string name="maze_new_maze">
+        labirin baru
+    </string>
+
+    <string name="maze_try_again">
+        coba lagi
+    </string>
+
+    <string name="maze_return">
+        kembali ke ketiadaan
+    </string>
+
+</resources>

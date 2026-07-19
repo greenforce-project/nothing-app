@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- "nothing." dipertahankan sebagai nama dan identitas aplikasi. -->
+    <string name="splash_title">
+        nothing.
+    </string>
+
+    <string name="splash_subtitle">
+        tidak ada yang perlu dimuat.
+    </string>
+
+    <string name="splash_credit">
+        dibuat dengan cinta oleh Muhammad Fadly A. S. ♡
+    </string>
+
+</resources>
