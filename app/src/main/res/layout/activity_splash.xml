@@ -17,33 +17,45 @@
 
         <View
             android:id="@+id/splash_dot"
-            android:layout_width="14dp"
-            android:layout_height="14dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:background="@drawable/splash_dot" />
 
         <TextView
             android:id="@+id/splash_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="22dp"
             android:fontFamily="sans-serif"
             android:includeFontPadding="false"
             android:letterSpacing="0.02"
             android:text="@string/splash_title"
             android:textColor="@color/nothing_foreground"
-            android:textSize="42sp"
+            android:textSize="44sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/splash_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="14dp"
             android:fontFamily="sans-serif"
             android:gravity="center"
             android:text="@string/splash_subtitle"
             android:textColor="@color/nothing_muted"
             android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/splash_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:text="@string/splash_credit"
+            android:textColor="@color/nothing_muted"
+            android:textSize="12sp" />
 
     </LinearLayout>
 
