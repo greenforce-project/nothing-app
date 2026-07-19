@@ -17,8 +17,8 @@
 
         <View
             android:id="@+id/splash_dot"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
             android:background="@drawable/splash_dot" />
 
         <TextView

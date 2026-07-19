@@ -6,26 +6,62 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
 
+    <!-- Legacy circular background for Android 5–7. -->
     <path
-        android:fillColor="@color/nothing_icon_background"
+        android:fillColor="@color/nothing_logo_background"
         android:pathData="
             M54,4
             A50,50 0,1 1,54,104
             A50,50 0,1 1,54,4
             Z" />
 
+    <!-- Subtle inner border. -->
     <path
-        android:fillColor="@color/nothing_icon_foreground"
-        android:fillType="evenOdd"
+        android:fillColor="@android:color/transparent"
         android:pathData="
-            M54,20
-            A34,34 0,1 1,54,88
-            A34,34 0,1 1,54,20
-            Z
+            M54,7
+            A47,47 0,1 1,54,101
+            A47,47 0,1 1,54,7"
+        android:strokeAlpha="0.16"
+        android:strokeColor="@color/nothing_logo_foreground"
+        android:strokeWidth="1" />
 
-            M54,33
-            A21,21 0,1 0,54,75
-            A21,21 0,1 0,54,33
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="
+            M49,29
+            A25,25 0,1 1,49,79
+            A25,25 0,1 1,49,29"
+        android:strokeAlpha="0.18"
+        android:strokeColor="@color/nothing_logo_foreground"
+        android:strokeLineCap="round"
+        android:strokeWidth="11" />
+
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="
+            M49,29
+            A25,25 0,1 1,49,79
+            A25,25 0,1 1,49,29"
+        android:strokeColor="@color/nothing_logo_foreground"
+        android:strokeLineCap="round"
+        android:strokeWidth="5.5" />
+
+    <path
+        android:fillAlpha="0.18"
+        android:fillColor="@color/nothing_logo_foreground"
+        android:pathData="
+            M81,68.5
+            A8.5,8.5 0,1 1,81,85.5
+            A8.5,8.5 0,1 1,81,68.5
+            Z" />
+
+    <path
+        android:fillColor="@color/nothing_logo_foreground"
+        android:pathData="
+            M81,72.5
+            A4.5,4.5 0,1 1,81,81.5
+            A4.5,4.5 0,1 1,81,72.5
             Z" />
 
 </vector>

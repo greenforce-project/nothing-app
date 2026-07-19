@@ -8,4 +8,7 @@
     <foreground
         android:drawable="@drawable/ic_nothing_logo_foreground" />
 
+    <monochrome
+        android:drawable="@drawable/ic_nothing_logo_monochrome" />
+
 </adaptive-icon>

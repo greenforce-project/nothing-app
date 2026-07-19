@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <background
-        android:drawable="@color/nothing_icon_background" />
+        android:drawable="@color/nothing_logo_background" />
 
     <foreground
-        android:drawable="@drawable/ic_nothing_foreground" />
+        android:drawable="@drawable/ic_nothing_logo_foreground" />
 
 </adaptive-icon>
