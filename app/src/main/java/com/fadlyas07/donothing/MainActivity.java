@@ -21,7 +21,7 @@ import android.widget.TextView;
 import java.util.Locale;
 import java.util.Random;
 
-public final class MainActivity extends Activity {
+public final class MainActivity extends LocaleActivity {
 
     private static final String PREFERENCES_NAME =
         "nothing_statistics";

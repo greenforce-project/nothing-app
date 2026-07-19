@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public final class MazeActivity extends Activity {
+public final class MazeActivity extends LocaleActivity {
 
     private static final String PREFERENCES_NAME =
             "nothing_maze_statistics";

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="language_indonesian">
+        ID
+    </string>
+
+    <string name="language_english">
+        EN
+    </string>
+
+    <string name="language_indonesian_description">
+        Ganti ke Bahasa Indonesia
+    </string>
+
+    <string name="language_english_description">
+        Ganti ke Bahasa Inggris
+    </string>
+
+</resources>

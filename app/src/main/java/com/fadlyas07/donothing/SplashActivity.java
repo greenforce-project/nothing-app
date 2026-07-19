@@ -15,7 +15,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.TextView;
 
-public final class SplashActivity extends Activity {
+public final class SplashActivity extends LocaleActivity {
 
     /*
      * Total splash duration is approximately 3 seconds:
