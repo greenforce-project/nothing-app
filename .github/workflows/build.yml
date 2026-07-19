@@ -1,6 +1,9 @@
 name: Build nothing
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -20,6 +23,7 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
+          cache: gradle
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
@@ -35,9 +39,9 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build release APK
-        run: ./gradlew clean assembleRelease --no-daemon
+        run: ./gradlew clean :app:assembleRelease --no-daemon --stacktrace
 
-      - name: Rename APK
+      - name: Prepare APK artifact
         run: |
           APK_PATH="$(find app/build/outputs/apk/release \
             -type f -name '*.apk' | head -n 1)"
@@ -47,11 +51,18 @@ jobs:
             exit 1
           fi
 
-          cp "$APK_PATH" nothing-release.apk
+          mkdir -p artifacts
 
-      - name: Upload APK
+          cp "$APK_PATH" \
+            "artifacts/nothing-release-${{ github.run_number }}.apk"
+
+          ls -lh artifacts
+
+      - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: nothing-release
-          path: nothing-release.apk
+          name: nothing-release-${{ github.run_number }}
+          path: artifacts/*.apk
           if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
